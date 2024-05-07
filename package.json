@@ -12,7 +12,9 @@
   "dependencies": {
     "bootstrap": "5.2",
     "chart.js": "^4.4.2",
+    "create": "^0.0.2",
     "nuxt": "^3.11.1",
+    "vite": "^5.2.11",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
