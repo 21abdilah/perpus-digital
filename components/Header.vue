@@ -1,38 +1,32 @@
 <template>
   <div class="header">
-    <div class="a-img">
-      <img src="~/assets/img/LOGO-SMK4 (1).png" alt="logo SMKN4" />
-    </div>
-
-    <div class="a-text">
-      <div class="i-judul">
-        <p>Perpus Digital</p>
-        <p>SMKN 4 Tasikmalaya</p>
+      <div class="h-img">
+          <img src="~/assets/img/LOGO-SMK4.png" alt="logo smkn 4" height="100px" width="100px">
       </div>
-      <p>JL.Depok, Sukamenak, Purbaratu</p>
-    </div>
+      <div class="h-text">
+          <div class="t-judul">
+              <h1>PERPUS DIGITAL</h1>
+              <address>
+                  SMKN 4 TASIKMALAYA
+                  <p>JL.DEPOK, SUKAMENAK, PERBARATU</p>
+              </address>
+          </div>
+      </div>
   </div>
 </template>
-
 <style scoped>
-.header {
+.header{
+  height: 150px;
   display: flex;
-  height: 180px;
-  width: 100%;
   align-items: center;
-  background-color: #265cb5;
-  color: #fff;
+  background-color: #26A0E4;
+  color: #ffffff;
 }
-.a-img > img {
-  width: 60%;
+.h-img > img {
+  width: 80px;
+  margin-left: 50px;
 }
-.a-text {
-  margin-left: -10px;
-  line-height: 10px;
-}
-.i-judul {
-  font-size: 35px;
-  line-height: 1em;
-  font-weight: 600;
+.t-judul {
+  margin-left: 40px;
 }
 </style>
