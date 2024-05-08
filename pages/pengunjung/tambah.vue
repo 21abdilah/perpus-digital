@@ -4,6 +4,7 @@
       <div class="col-lg-12">
         <h2 class="text-center my-4">ISI BUKU KUNJUNGAN</h2>
         <form @submit.prevent="kirimData">
+          <!-- Input fields here -->
           <div class="mb-3"></div>
           <input
             v-model="form.nama"
@@ -11,6 +12,7 @@
             class="form-control form-control-lg rounded-5"
             placeholder="NAMA.."
           /><br />
+          <!-- Select fields here -->
           <div class="mb-3">
             <select
               v-model="form.keanggotaan"
@@ -23,9 +25,10 @@
                 :value="member.id"
               >
                 {{ member.nama }}
-              </option></select
-            ><br />
-            <div class="mb-3" v-if="form.keanggotaan == '2'">
+              </option>
+            </select><br />
+            <!-- Conditional rendering of additional fields -->
+            <div class="mb-3" v-if="form.keanggotaan == '10'">
               <div class="row">
                 <div class="col-md-4">
                   <select
@@ -65,6 +68,7 @@
                 </div>
               </div>
             </div>
+            <!-- Select field for purpose -->
             <div class="mb-3">
               <select
                 v-model="form.keperluan"
@@ -81,24 +85,38 @@
               </select>
             </div>
           </div>
-          <button
-            type="submit"
-            class="btn btn-lg rounded-5 px-5 bg-primary text-white"
-          >
-            KIRIM
-          </button>
-          <nuxt-link
-            to="/"
-            class="btn btn-light btn-lg rounded-4 px-4"
-            style="margin-top: 10px"
-            >KEMBALI</nuxt-link
-          >
+          <!-- Submit button -->
+          <div class="text-center">
+            <button type="submit" class="btn btn-light btn-lg rounded-4 px-4">KIRIM</button>
+          </div>
         </form>
+        <!-- Back button -->
+        <div class="form-footer">
+          <nuxt-link to="../"><button class="btn btn-light btn-lg rounded-4 px-4">KEMBALI</button></nuxt-link>
+        </div>
         <br />
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+/* CSS for positioning the form footer */
+.form-footer {
+  position: fixed;
+  bottom: 10px; /* adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn-dark {
+  box-shadow: 1px 1px 10px #e4ecea !important;
+}
+.btn-light {
+  background-color: #5fd8fe !important;
+  box-shadow: 1px 1px 10px #5fd8fe !important;
+  
+}
+</style>
 
 <script setup>
 const supabase = useSupabaseClient();
@@ -136,13 +154,3 @@ onMounted(() => {
   getKeperluan();
 });
 </script>
-
-<style scoped>
-.btn-dark {
-  box-shadow: 1px 1px 10px #e4ecea !important;
-}
-.btn-light {
-  background-color: #5fd8fe !important;
-  box-shadow: 1px 1px 10px #5fd8fe !important;
-}
-</style>
