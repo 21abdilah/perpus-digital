@@ -1,10 +1,9 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid p-5 ">
     <div class="row">
       <div class="col-lg-12">
         <h2 class="text-center my-4">ISI BUKU KUNJUNGAN</h2>
         <form @submit.prevent="kirimData">
-          <!-- Input fields here -->
           <div class="mb-3"></div>
           <input
             v-model="form.nama"
@@ -12,7 +11,6 @@
             class="form-control form-control-lg rounded-5"
             placeholder="NAMA.."
           /><br />
-          <!-- Select fields here -->
           <div class="mb-3">
             <select
               v-model="form.keanggotaan"
@@ -25,10 +23,9 @@
                 :value="member.id"
               >
                 {{ member.nama }}
-              </option>
-            </select><br />
-            <!-- Conditional rendering of additional fields -->
-            <div class="mb-3" v-if="form.keanggotaan == '10'">
+              </option></select
+            ><br />
+            <div class="mb-3" v-if="form.keanggotaan === 6">
               <div class="row">
                 <div class="col-md-4">
                   <select
@@ -68,7 +65,6 @@
                 </div>
               </div>
             </div>
-            <!-- Select field for purpose -->
             <div class="mb-3">
               <select
                 v-model="form.keperluan"
@@ -87,12 +83,18 @@
           </div>
           <!-- Submit button -->
           <div class="text-center">
-            <button type="submit" class="btn btn-light btn-lg rounded-4 px-4">KIRIM</button>
+            <button type="submit" class="btn bg-success btn-lg rounded-4 px-4 " style="float: left">
+              KIRIM
+            </button>
           </div>
         </form>
         <!-- Back button -->
         <div class="form-footer">
-          <nuxt-link to="../"><button class="btn btn-light btn-lg rounded-4 px-4">KEMBALI</button></nuxt-link>
+          <nuxt-link to="../"
+            ><button class="btn btn-light btn-lg rounded-4 px-4">
+              KEMBALI
+            </button></nuxt-link
+          >
         </div>
         <br />
       </div>
@@ -101,11 +103,11 @@
 </template>
 
 <style scoped>
-/* CSS for positioning the form footer */
+
 .form-footer {
   position: fixed;
-  bottom: 10px; /* adjust as needed */
-  left: 50%;
+  bottom: 10px; 
+  left: 80%;
   transform: translateX(-50%);
 }
 .btn-dark {
@@ -114,7 +116,6 @@
 .btn-light {
   background-color: #5fd8fe !important;
   box-shadow: 1px 1px 10px #5fd8fe !important;
-  
 }
 </style>
 
@@ -139,7 +140,7 @@ const kirimData = async () => {
   if (!error) navigateTo("/pengunjung");
 };
 
-const getKeanggotaan = async () => {
+const getKeanggotan = async () => {
   const { data, error } = await supabase.from("keanggotaan").select("*");
   if (data) members.value = data;
 };
@@ -150,7 +151,7 @@ const getKeperluan = async () => {
 };
 
 onMounted(() => {
-  getKeanggotaan();
+  getKeanggotan();
   getKeperluan();
 });
 </script>

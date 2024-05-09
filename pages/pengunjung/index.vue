@@ -9,12 +9,12 @@
               v-model="keyword"
               type="search"
               class="form-control rounded-5"
-              placeholder="Mau baca apa hari ini?"
+              placeholder="Filter.....?"
             />
           </form>
         </div>
         <div class="my-3 text-muted">
-          menampilkan {{ visitors.length }} dari {{ jumlah }}
+          menampilkan {{ visitors.length }} dari {{ visitors.length }}
         </div>
         <table class="table">
           <thead>
@@ -58,10 +58,10 @@
 </template>
 
 <style scoped>
-/* CSS for positioning the form footer */
+
 .form-footer {
   position: fixed;
-  bottom: 10px; /* adjust as needed */
+  bottom: 10px; 
   right: 0%;
   transform: translateX(-50%);
 }
