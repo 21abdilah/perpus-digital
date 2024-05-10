@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="my-3">
-          <form @submit.prevent="getBuku">
+          <form @submit.prevent="getBooks">
             <input
               v-model="keyword"
               type="search"
@@ -14,11 +14,11 @@
         </div>
         <div class="my-3 text-muted">menampilkan {{ books.length }} buku</div>
         <div class="row justify-content-evenly">
-          <div v-for="(buku, i) in books" :key="i" class="col-lg-2">
-            <nuxt-link :to="`/buku/${buku.id}`">
+          <div v-for="(book, i) in books" :key="i" class="col-lg-2">
+            <nuxt-link :to="`/buku/${book.id}`">
               <div class="card mb-3">
                 <div class="card-body">
-                  <img :src="buku.cover" class="cover" :alt="buku.judul" />
+                  <img :src="book.cover" class="cover" alt="cover" />
                 </div>
               </div>
             </nuxt-link>
@@ -37,7 +37,8 @@
 
 <script setup>
 const supabase = useSupabaseClient();
-
+const book = ref([]);
+const keyword = ref([]);
 const books = ref([]);
 
 const getBooks = async () => {
@@ -48,8 +49,16 @@ const getBooks = async () => {
   if (data) books.value = data;
 };
 
+const countBook = async () => {
+  const { data, count } = await supabase
+    .from("buku")
+    .select("*", { count: "exact" });
+  if (data) books.value = count;
+};
+
 onMounted(() => {
   getBooks();
+  countBook();
 });
 </script>
 

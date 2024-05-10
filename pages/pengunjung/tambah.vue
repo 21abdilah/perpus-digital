@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid p-5 ">
+  <div class="container-fluid p-5">
     <div class="row">
       <div class="col-lg-12">
         <h2 class="text-center my-4">ISI BUKU KUNJUNGAN</h2>
@@ -25,7 +25,7 @@
                 {{ member.nama }}
               </option></select
             ><br />
-            <div class="mb-3" v-if="form.keanggotaan === 6">
+            <div class="mb-3" v-if="form.keanggotaan == '1'">
               <div class="row">
                 <div class="col-md-4">
                   <select
@@ -83,13 +83,17 @@
           </div>
           <!-- Submit button -->
           <div class="text-center">
-            <button type="submit" class="btn bg-success btn-lg rounded-4 px-4 " style="float: left">
+            <button
+              type="submit"
+              class="btn bg-success btn-lg rounded-4 px-4"
+              style="float: left"
+            >
               KIRIM
             </button>
           </div>
         </form>
         <!-- Back button -->
-        <div class="form-footer">
+        <div class="form-kembali">
           <nuxt-link to="../"
             ><button class="btn btn-light btn-lg rounded-4 px-4">
               KEMBALI
@@ -103,11 +107,10 @@
 </template>
 
 <style scoped>
-
-.form-footer {
+.form-kembali {
   position: fixed;
-  bottom: 10px; 
-  left: 80%;
+  bottom: 10px;
+  left: 95%;
   transform: translateX(-50%);
 }
 .btn-dark {

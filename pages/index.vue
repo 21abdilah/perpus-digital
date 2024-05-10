@@ -5,7 +5,7 @@
           <nuxt-link to="/pengunjung/tambah">
             <div class="card bg-pengunjung rounded-5">
               <div class="card-body text-center">
-                <h2 style="font-family: ">Pengunjung</h2>
+                <h2 style="color: #5FD8FE;">Pengunjung</h2>
               </div>
             </div>
           </nuxt-link>
@@ -14,14 +14,14 @@
           <nuxt-link to="/buku">
             <div class="card bg-buku rounded-5">
               <div class="card-body text-center">
-                <h2 style="font-family: ">Cari Buku</h2>
+                <h2 style="color: #5FD8FE;">Cari Buku</h2>
               </div>
             </div>
           </nuxt-link>
         </div>
         </div>
   
-        <h2 class="mt-5" style="margin-left: 150px;">STATISTIK</h2>
+        <h2 class="mt-5" style="margin-left: 100px;">STATISTIK</h2>
         <div class="row my-5 justify-content-around">
           <div class="col-lg-5">
             
@@ -109,5 +109,6 @@ onMounted(() => {
 }
 .text > h1 {
   font-size: 9rem;
+  
 }
   </style>

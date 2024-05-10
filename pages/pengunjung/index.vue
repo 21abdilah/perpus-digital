@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid p-5">
     <div class="row">
       <div class="col-lg-12">
         <h2 class="text-center my-4">RIWAYAT KUNJUNGAN</h2>
@@ -19,7 +19,7 @@
         <table class="table">
           <thead>
             <tr>
-              <td>#</td>
+              <td>NO</td>
               <td>NAMA</td>
               <td>KEANGGOTAAN</td>
               <td>WAKTU</td>
