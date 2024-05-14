@@ -28,8 +28,8 @@
               <div class="card bg-spengunjung rounded-5">
               <div class="card-body text">
                 <div class="row">
-                  <div class=" form-pengunjung col p-5"></div>
-                  <div class="form-pengunjung col mt-5 p-5"><h2><span class="no">{{ jml_pengunjung }}</span>Pengunjung</h2></div>
+                  <div class="col p-5" ></div>
+                  <div class="col mt-4"><h2><span>{{ jml_pengunjung }}</span>Pengunjung</h2></div>
                 </div>
               </div>
             </div>
@@ -41,8 +41,8 @@
             <div class="card bg-sbuku rounded-5">
               <div class="card-body text">
                 <div class="row">
-                  <div class="col p-5"></div>
-                  <div class="col mt-5 p-5"><h2><span class="no">{{ jml_buku }}</span>Buku</h2></div>
+                  <div class="col p-5 "></div>
+                  <div class="col mt-4"><h2><span>{{ jml_buku }}</span>Buku</h2></div>
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@
 
   async function getjml_buku() {
     const{error, data, count } = await supabase
-    .from("Buku")
+    .from("buku")
     .select('*', {count: 'exact' })
     if (count) jml_buku.value = count
   }
@@ -107,8 +107,8 @@ onMounted(() => {
   display: flex;
   align-items: center;
 }
-.text > h1 {
-  font-size: 9rem;
+.text > h2 {
+  font-size: 20rem;
   
 }
   </style>
