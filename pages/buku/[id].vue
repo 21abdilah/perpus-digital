@@ -6,7 +6,7 @@
       <div class="col-md-3 ">
         <img :src="buku.cover" class="cover" alt="cover buku"/>
       </div>
-      <div class="p-5 col-md-9">
+      <div class=" col-md-9 p-5">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Judul: {{ buku.judul }}</li>
           <li class="list-group-item">Penulis: {{ buku.penulis }}</li>

@@ -1,14 +1,14 @@
 <template>
   <div class="header">
     <div class="h-img">
-      <img src="~/assets/img/LOGO-SMK4.png" alt="logo smkn 4" />
+      <img src="~/assets/img/SMKN4.png" alt="logo smkn 4" />
     </div>
     <div class="h-text">
       <div class="t-judul">
         <h1>PERPUS DIGITAL</h1>
         <address>
           SMKN 4 TASIKMALAYA
-          <p>JL. DEPOK, SUKAMENAK, PERBARATU</p>
+          <p>JL.DEPOK,SUKAMENAK,PURBARATU</p>
         </address>
       </div>
     </div>
@@ -33,10 +33,12 @@
 .t-judul {
   margin-left: 20px;
 }
+
 @media (max-width: 750px) {
   .header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     text-align: center;
   }
 

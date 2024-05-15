@@ -14,8 +14,8 @@
           </form>
         </div>
         <div class="my-3 text-muted">menampilkan {{ books.length }} buku dari {{ books.length }}</div>
-        <div class="row justify-content-evenly">
-          <div v-for="(book, i) in books" :key="i" class="col-lg-2 col-md-4 col-sm-6">
+        <div class="row">
+          <div v-for="(book, i) in books" :key="i" class="col-lg-2">
             <nuxt-link :to="`/buku/${book.id}`">
               <div class="card mb-3">
                 <div class="card-body">

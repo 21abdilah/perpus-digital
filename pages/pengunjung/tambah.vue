@@ -110,7 +110,7 @@
 .form-kembali {
   position: fixed;
   bottom: 10px;
-  left: 95%;
+  left: 50%;
   transform: translateX(-50%);
 }
 .btn-dark {
