@@ -60,6 +60,12 @@
 .bg-warning {
   box-shadow: 1px 1px 10px #E4C72D;
 }
+
+button:hover {
+  border: 1px solid #0000;
+  background-color: #F0FFFF;
+  
+}
 </style>
 
 <script setup>

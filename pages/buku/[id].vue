@@ -12,6 +12,7 @@
           <li class="list-group-item">Penulis: {{ buku.penulis }}</li>
           <li class="list-group-item">Penerbit: {{ buku.penerbit }}</li>
           <li class="list-group-item">Tahun Terbit: {{ buku.tahun_terbit }}</li>
+          <li class="list-group-item">Rak: {{ buku.rak }}</li>
           <li class="list-group-item">
             <span v-if="buku.kategori">
               Kategori : {{ buku.kategori.nama }}

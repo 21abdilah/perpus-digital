@@ -81,21 +81,19 @@
               </select>
             </div>
           </div>
-          <!-- Submit button -->
-          <div class="text-center">
             <button
               type="submit"
-              class="btn bg-success btn-lg rounded-4 px-4"
-              style="float: left"
+              class="btn bg-success  btn-lg rounded-4 px-4"
+              style="float: left "
             >
               KIRIM
             </button>
-          </div>
+      
         </form>
         <!-- Back button -->
         <div class="form-kembali">
           <nuxt-link to="../"
-            ><button class="btn btn-light btn-lg rounded-4 px-4">
+            ><button class="btn btn-danger btn-lg rounded-4 px-4">
               KEMBALI
             </button></nuxt-link
           >
@@ -119,6 +117,11 @@
 .btn-light {
   background-color: #5fd8fe !important;
   box-shadow: 1px 1px 10px #5fd8fe !important;
+}
+button:hover {
+  border: 1px solid #000;
+  background-color: #F0FFFF;
+  color: #000;
 }
 </style>
 

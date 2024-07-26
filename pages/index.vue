@@ -5,7 +5,7 @@
         <nuxt-link to="/pengunjung/tambah">
           <div class="card bg-pengunjung rounded-5">
             <div class="card-body d-flex justify-content-center align-items-center">
-              <h2 style="color: #5FD8FE;">Pengunjung</h2>
+              <h2 style="color: #F0FFFF;">PENGUNJUNG</h2>
             </div>
           </div>
         </nuxt-link>
@@ -14,7 +14,7 @@
         <nuxt-link to="/buku">
           <div class="card bg-buku rounded-5">
             <div class="card-body d-flex justify-content-center align-items-center">
-              <h2 style="color: #5FD8FE;">Cari Buku</h2>
+              <h2 style="color: #F0FFFF;">CARI BUKU</h2>
             </div>
           </div>
         </nuxt-link>
@@ -73,6 +73,9 @@ onMounted(() => {
 </script>
 
 <style scoped>
+* {
+  text-decoration: none;
+}
 .card {
   height: 250px;
   box-shadow: 1px 1px 10px #424242;

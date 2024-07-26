@@ -19,7 +19,7 @@
 .header {
   display: flex;
   align-items: center;
-  background-color: #5fd8fe;
+  background-color: #DC143C;
   color: #ffffff;
   padding: 10px;
 }
